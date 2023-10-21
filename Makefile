@@ -7,7 +7,7 @@ all: main
 main: main.o
 	@$(LD) -o $@ $^
 
-main.o: main.asm print.asm linux.asm
+main.o: main.asm
 	@$(ASM) $(ASMFLAGS) $<
 
 run: main
